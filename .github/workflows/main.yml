@@ -34,3 +34,12 @@ jobs:
             
             - name: Verify AWS connection
               run: aws sts get-caller-identity
+
+            - name : Terraform Init
+              run: terraform init
+            
+            - name : Terraform Plan
+              run: terraform plan
+
+            - name : Terraform Apply
+              run: terraform apply -auto-approve
